@@ -1,0 +1,5 @@
+id,name,description,price,category,imageUrl,featured
+ULT-250,Ultimate Package,All PSD templates + hologram overlays + priority support,250,Bundle,,true
+PSD-BASIC,Basic PSD Hologram,Entry PSD template with base hologram sheen,39,PSD,,false
+PSD-PRO,Pro PSD Hologram,Advanced PSD template with layered hologram effects,79,PSD,,false
+PSD-DELUXE,Deluxe PSD Hologram,Premium PSD template with multi-angle hologram sheen,129,PSD,,false
