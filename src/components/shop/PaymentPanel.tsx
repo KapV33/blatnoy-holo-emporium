@@ -8,13 +8,12 @@ import { toast } from "@/hooks/use-toast";
 import type { Product } from "@/types/product";
 
 const WALLETS = {
-  BTC: "bc1q-your-btc-address-change-me",
-  ETH: "0xYourEthereumAddressChangeMe",
-  USDT_TRC20: "TDYourTronAddressChangeMe",
-  USDT_ERC20: "0xYourEthUsdtAddressChangeMe",
+  BTC: "bc1qcqpxzc2f8ka2s2kv00yyt97q6n6455909uxpg9khxmq95gaqhlpsawg0rp",
+  ETH: "0x547b6ed8948BAb9c06FC263eFd408Bca0470f055",
+  USDT_TRC20: "TTSHEFTgpZ8rxJtpUV9Tqr4VyYFRi1JqnM",
 };
 
-type Asset = "BTC" | "ETH" | "USDT_TRC20" | "USDT_ERC20";
+type Asset = "BTC" | "ETH" | "USDT_TRC20";
 
 interface PaymentPanelProps {
   selectedProduct?: Product | null;
@@ -32,8 +31,6 @@ export const PaymentPanel: React.FC<PaymentPanelProps> = ({ selectedProduct }) =
         return WALLETS.ETH;
       case "USDT_TRC20":
         return WALLETS.USDT_TRC20;
-      case "USDT_ERC20":
-        return WALLETS.USDT_ERC20;
     }
   }, [asset]);
 
@@ -41,7 +38,7 @@ export const PaymentPanel: React.FC<PaymentPanelProps> = ({ selectedProduct }) =
     <section id="payment" className="mt-16">
       <div className="max-w-3xl mx-auto p-6 rounded-xl border border-white/10 bg-card/60 backdrop-blur">
         <h2 className="text-2xl font-bold mb-2">Checkout</h2>
-        <p className="text-muted-foreground mb-6">We accept BTC, USDT (TRC20 & ERC20), and ETH only. Send the USD equivalent to the selected address.</p>
+        <p className="text-muted-foreground mb-6">We accept BTC, USDT (TRC20), and ETH only. Send the USD equivalent to the selected address.</p>
 
         <div className="grid sm:grid-cols-2 gap-6">
           <div className="space-y-4">
@@ -74,7 +71,6 @@ export const PaymentPanel: React.FC<PaymentPanelProps> = ({ selectedProduct }) =
                   <SelectItem value="BTC">BTC</SelectItem>
                   <SelectItem value="ETH">ETH</SelectItem>
                   <SelectItem value="USDT_TRC20">USDT (TRC20)</SelectItem>
-                  <SelectItem value="USDT_ERC20">USDT (ERC20)</SelectItem>
                 </SelectContent>
               </Select>
             </div>
